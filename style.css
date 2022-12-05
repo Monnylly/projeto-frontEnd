@@ -397,8 +397,8 @@ label{
   position: absolute;
   width: 448px;
   height: 90px;
-  left: 18px;
-  top: 650px;
+  /* left: 18px; */
+  top: 630px;
 
   /* caption/regular */
 
@@ -413,6 +413,10 @@ label{
   /* bw/color-gray-70 */
 
   color: #7E8A98;
+}
+
+#politics a{
+  color: #19C1CE;
 }
 
 #btn{
@@ -454,25 +458,12 @@ label{
 }
 
 #text-2{
-  /* position: relative;
-  width: 1440px;
-  height: 331px; */
-
-  /* brand/rd-station/color-primary-100 */
 
   background: #0B485B;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 h3{
-  /* position: absolute;
-  width: 600px;
-  height: 35px; */
-  /* left: 128px;
-  top: 810px; */
-
-  /* heading/sm/normal */
-
   margin-left: 108px;
 
 
@@ -511,23 +502,6 @@ h3{
   color: #FFFFFF;
 }
 
-
-
-/* #imag-div{
-  position: absolute;
-  width: 1440px;
-  height: 902px;
-  left: 0px;
-  top: 1101px;
-}
-
-#img-2{
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  left: 108px;
-  top: 1283px;
-} */
 
 .box {
   position: absolute;
@@ -1064,11 +1038,13 @@ height: 48px; */
 
 
 #btn-label{
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 8px 24px;
+  padding: 8px 24px; */
+  position: absolute;
+  top: 200px;
   gap: 8px;
 
   width: 257px;
@@ -1291,12 +1267,10 @@ height: 48px; */
 }
 
 #icons-integrations{
-  display: flex;
-  flex-direction: row;
   position: absolute;
   width: 579px;
-  height: 160px;
-  left: 753px;
+  /* height: 260px; */
+  left: 653px;
   /* top: 4158px; */
 }
 
@@ -1312,7 +1286,7 @@ height: 48px; */
   width: 579px;
   height: 68px;
   left: 15px;
-  top: 30px;
+  top: 20px;
 }
 
 #row-icons2{
@@ -1327,5 +1301,19 @@ height: 48px; */
   width: 579px;
   height: 68px;
   left: 15px;
-  top: 100px;
+  top: 120px;
 }
+
+.icons-integ{
+  width: 103px;
+  height: 68px;
+}
+
+#play-image{
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  left: 860px;
+  top: 80px;
+}
+

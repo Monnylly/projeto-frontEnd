@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>rd-station</title>
   <link rel="stylesheet" href="style.css">
+
+
 </head>
 <body>
   <main>
@@ -56,6 +58,7 @@
         <h1>Gere mais <span id="oportunidades">oportunidades</span>
           para seu negócio
         </h1>
+
         <p id="parag-1">O RD Station Marketing é um software para sua empresa fazer campanhas melhores, nutrir Leads, gerar oportunidades comerciais qualificadas e alcançar mais resultados.
         </p>
         <div id="text-2">
@@ -98,19 +101,46 @@
                   <label for="name">Diga, qual seu nome?</label><br>
                   <input class="input" type="text" id="name" placeholder="Insira seu nome" required/>
                 </div>
-                <div id="email-area">
-                  <label for="email">Seu email de trabalho</label><br>
-                  <input class="input" type="email" id="email" placeholder="Insira seu e-mail" required/>
-                </div>
+
+                  <!-- <label for="email">Seu email de trabalho</label><br>
+                  <input class="input" type="email" id="email" placeholder="Insira seu e-mail" required/> -->
+                  <label for="email">Seu email de trabalho</label>
+                  <tr >
+                    <td>
+                    <input class=input type="text" name="email" onblur="validacaoEmail(f1.email)"  maxlength="60" size='65'>
+                    </td>
+                    <td>
+                    <div id="msgemail"></div>
+                    </td>
+                  </tr>
+
+
                 <div id="telephone-area">
                   <label for="telephone">Seu telefone</label>
                   <br>
-                  <input class="input" type="number" id="telephone" placeholder="Insira seu número de telefone com DDD" required/>
+                  <input class="input" id="telephone" placeholder="Insira seu número de telefone com DDD" required type="tel" maxlength="14" required="" data-js="phone">
+
+
                 </div>
                 <div id="ocupation-area">
-                  <label for="ocupation">Seu cargo de ocupação</label>
-                  <br>
-                  <input type="" id="ocupation" placeholder="Selecione seu cargo" required/>
+                  <label id="ocupation">Seu cargo de ocupação</label>
+                  <select name="select" class="input" required >Seu cargo de ocupação
+                    <option value="" selected>Selecione seu cargo</option>
+                    <option value="">"Sócio(a)/ CEO / Proprietário(a)</option>
+                    <option value="">Diretor(a) de Vendas</option>
+                    <option value="">Diretor(a) de Marketing</option>
+                    <option value="">Diretor(a) de Outras Áreas</option>
+                    <option value="">Gerente de Marketing</option>
+                    <option value="">Gerente de Vendas</option>
+                    <option value="">Coodenador(a)/Supervisão(a) de Marketing</option>
+                    <option value="">Coodenador(a)/ Supervisão(a) de Vendas</option>
+                    <option value="">Analista/Analista de Vendas</option>
+                    <option value="">Vendedor(a)/ Executivo(a) de Contas</option>
+                    <option value="">Estudante</option>
+                    <option value="">Outros Cargos</option>
+                  </select>
+                  <!-- <label for="ocupation">Seu cargo de ocupação</label> -->
+
                 </div>
                 <div id="password-area">
                   <label for="password">Crie uma senha</label>
@@ -118,7 +148,7 @@
                   <input class="input" type="password" id="password" placeholder="*******" required/>
                 </div>
                 <div id="password-confirm">
-                  <label for="password-conf">Confirme sua senha</label>
+                  <label for="password-conf" placeholder="Branding-rd@2021*">Confirme sua senha</label>
                   <br>
                   <input class="input"type="password" id="password-conf" placeholder="*******" required/>
 
@@ -126,19 +156,19 @@
                   <p><b>Qual o site da sua empresa?</b></p>
                   <input type="checkbox" id="site"required/> Meu site é <br>
 
-                  <input type="text" placeholder="Insira o endereço do seu site" required />
+                  <input class="input" type="text" placeholder="Insira o endereço do seu site" required />
                   <br>
                   <input type="checkbox" id="site"required/> Ainda não tenho site
                   </br>
                 </div>
               </form>
-              <span id="politics">
-              * Ao criar minha conta estou de acordo com os termos de uso do software e política de privacidade.
-              <br>
-              * Ao preencher o formulário, concordo em receber comunicações de acordo com meus interesses.
-              <br>
-              *Você pode alterar suas permissões de comunicação a qualquer tempo.
-              </span>
+              <ul id="politics">
+                <br>
+                <br>
+                <li>Ao criar minha conta estou de acordo com os <a href=" https://legal.rdstation.com/pt-BR/rdstation-services-agreement/" >termos de uso </a>do software e <a href="https://legal.rdstation.com/pt/privacy-policy/">política de privacidade.</a></li>
+                <li>Ao preencher o formulário, concordo em receber comunicações de acordo com meus interesses.</li>
+                <li>Você pode alterar suas permissões de comunicação a qualquer tempo.</li>
+              </ul>
               <div id="btn">
                 <button type="submit" id="btn-acount">CRIAR MINHA CONTA</button>
               </div>
@@ -203,6 +233,8 @@
         </button>
           <!-- <span id="shadown-2"></span> -->
         <img id="img-video"src="imagens/img-video.png">
+        <a href="https://www.youtube.com/watch?v=lGCesaaLi4s" ><img id="play-image" src="imagens/icons-rd/play.png"></a>
+
       </span>
 
     </div>
@@ -212,48 +244,56 @@
           <h2 id="title-h2">Torne sua operação de Marketing ainda mais poderosa</h2>
           <h4 id="subtitle-3">O RD Station Marketing se conecta as principais ferramentas nacionais e internacionais </h4>
           <button id="btn-label"
-            >CRIAR CONTA GRATUITA
+          >CRIAR CONTA GRATUITA
           </button>
         </div>
+
         <div id="icons-integrations">
           <div id="row-icons">
-            <i><img src="imagens/rd-station-crm.png"/></i>
-
-            <i><img src="imagens/Mobile/section/salesforce.svg"/></i>
-            <i><img src="imagens/Mobile/section/google.svg"/></i>
-            <i><img src="imagens/Mobile/section/facebook.svg"/></i>
-            <i><img src="imagens/Mobile/section/linkedin.svg"/></i>
+            <i class="icons-integ"><img src="imagens/rd-station-crm.png"/></i>
+            <i class="icons-integ"><img src="imagens/icons-rd/salesforce.png"/></i>
+            <i class="icons-integ"><img src="imagens/icons-rd/google.png"/></i>
+            <i class="icons-integ"><img src="imagens/icons-rd/facebook.png"/></i>
+            <i class="icons-integ"><img src="imagens/icons-rd/linkedin.png"/></i>
           </div>
 
           <div id="row-icons2">
-            <i><img src="imagens/Mobile/section/wordpress.svg"/></i>
-            <i><img src="imagens/Mobile/section/hotmart.svg"/></i>
-            <i><img src="imagens/Mobile/section/pagseguro.svg"/></i>
-            <i><img src="imagens/Mobile/section/shopify.svg"/></i>
-            <i><img src="imagens/Mobile/section/zapier.svg"/></i>
+            <i class="icons-integ"><img src="imagens/icons-rd/wordpress.png"/></i>
+            <i class="icons-integ"><img src="imagens/icons-rd/hotmart.png"/></i>
+            <i class="icons-integ"><img src="imagens/icons-rd/pagseguro.png"/></i>
+            <i class="icons-integ"><img src="imagens/icons-rd/shopify.png"/></i>
+            <i class="icons-integ"><img src="imagens/icons-rd/zapier.png"/></i>
           </div>
 
         </div>
       </div>
     </section>
+
   <footer id="rodape">
     <img id="logo-footer" src="imagens/logo.svg" alt="logo Rdstation">
     <div id="icons-footer">
-      <i><img src="/imagens/twiter.svg"></i>
-      <i><img src="/imagens/facebook/facebook.svg"/></i>
-      <i><img src="/imagens/linkedin/default.svg"/></i>
-      <i><img src="/imagens/instagram/default.svg"/></i>
-      <i><img src="/imagens/youtube.svg"></i>
+      <a href="https://twitter.com/rd_station" target="_blank">
+        <img src="/imagens/twiter.svg">
+      </a>
+      <a href="https://www.facebook.com/ResultadosDigitais/" target="_blank">
+        <img src="/imagens/facebook/facebook.svg">
+      </a>
+      <a href="https://www.linkedin.com/company/resultadosdigitais" target="_blank">
+        <img src="/imagens/linkedin/default.svg"/>
+      </a>
+      <a href="https://www.instagram.com/resdigitais/" target="_blank">
+        <img src="/imagens/instagram/default.svg"/>
+      </a>
+      <a href="https://www.youtube.com/channel/UC5lPKvmw6-DFya_qreisENQ" target="_blank">
+        <img src="/imagens/youtube.svg">
+      </a>
     </div>
-
-
-
-
-
     <span id="border-footer"></span>
     <h6 id="politic-rodape">© 2021 RD Station. Política de Privacidade.</h6>
   </footer>
   </main>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
