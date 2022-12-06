@@ -5,12 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>rd-station</title>
+  <link rel="stylesheet" href="global.css">
   <link rel="stylesheet" href="style.css">
-
 
 </head>
 <body>
-  <main>
+  <main class="site-rd">
     <header>
       <img id="logo" src="imagens/logo.svg" alt="logo Rdstation">
       <div id="navegacao">
@@ -86,7 +86,7 @@
           </div>
         </div>
 
-        <div id="form">
+        <div class="form">
           <div id="top">
             <h4 id="title">
               Comece seus 10 dias de teste grátis do RD Station Marketing!
@@ -96,31 +96,19 @@
             </span>
             <span id="border"></span>
             <div id="inputs-form">
-              <form id="inputs" action="/pagina-processa-dados-do-form" method="post"></form>
-                <div id="name-area">
+              <form name="formuser" id="inputs" action="https://rdstation-signup-psel.herokuapp.com" method="post"></form>
+                <div>
                   <label for="name">Diga, qual seu nome?</label><br>
-                  <input class="input" type="text" id="name" placeholder="Insira seu nome" required/>
+                  <input class="input" type="text" id="name" placeholder="Insira seu nome" required size="52" maxlength="150"/>
                 </div>
-
-                  <!-- <label for="email">Seu email de trabalho</label><br>
-                  <input class="input" type="email" id="email" placeholder="Insira seu e-mail" required/> -->
+                <div>
                   <label for="email">Seu email de trabalho</label>
-                  <tr >
-                    <td>
-                    <input class=input type="text" name="email" onblur="validacaoEmail(f1.email)"  maxlength="60" size='65'>
-                    </td>
-                    <td>
-                    <div id="msgemail"></div>
-                    </td>
-                  </tr>
-
-
+                  <input class=input type="email" name="email" onblur="validacaoEmail(f1.email)"  maxlength="60" size='65' placeholder="Insira seu e-mail">
+                </div>
                 <div id="telephone-area">
                   <label for="telephone">Seu telefone</label>
                   <br>
                   <input class="input" id="telephone" placeholder="Insira seu número de telefone com DDD" required type="tel" maxlength="14" required="" data-js="phone">
-
-
                 </div>
                 <div id="ocupation-area">
                   <label id="ocupation">Seu cargo de ocupação</label>
@@ -139,26 +127,22 @@
                     <option value="">Estudante</option>
                     <option value="">Outros Cargos</option>
                   </select>
-                  <!-- <label for="ocupation">Seu cargo de ocupação</label> -->
-
                 </div>
                 <div id="password-area">
                   <label for="password">Crie uma senha</label>
                   <br>
-                  <input class="input" type="password" id="password" placeholder="*******" required/>
+                  <input class="input" name="password" type="password" id="password" placeholder="*******" required/>
                 </div>
                 <div id="password-confirm">
-                  <label for="password-conf" placeholder="Branding-rd@2021*">Confirme sua senha</label>
+                  <label for="password-conf" id="password-confirm" placeholder="Branding-rd@2021*">Confirme sua senha</label>
                   <br>
-                  <input class="input"type="password" id="password-conf" placeholder="*******" required/>
-
+                  <input class="input" type="password" id="password-conf" name="password-conf"  placeholder="*******" required/>
                   <br>
                   <p><b>Qual o site da sua empresa?</b></p>
-                  <input type="checkbox" id="site"required/> Meu site é <br>
-
-                  <input class="input" type="text" placeholder="Insira o endereço do seu site" required />
                   <br>
-                  <input type="checkbox" id="site"required/> Ainda não tenho site
+                  <input type="radio" name="webmaster" value="meu site é"required/> Meu site é <br>
+                    <input  class="input" id="url" type="text" placeholder="Insira o endereço do seu site" required />
+                  <input type="radio" name="webmaster" value="ainda nao tenho site"required/> Ainda não tenho site
                   </br>
                 </div>
               </form>
@@ -170,19 +154,16 @@
                 <li>Você pode alterar suas permissões de comunicação a qualquer tempo.</li>
               </ul>
               <div id="btn">
-                <button type="submit" id="btn-acount">CRIAR MINHA CONTA</button>
-              </div>
+                <button type="submit" id="btn-acount" onclick="validarSenha()">CRIAR MINHA CONTA</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </section>
-    <div id="teste">
+    <div id="box-2">
       <h2 id="text-title">A ferramenta de Automação de Marketing líder na América Latina</h2>
         <div id="cards">
-          <!-- <div id="line"></div> -->
           <div id="card-1">
             <img src="imagens/icon1.png">
             <span class="title-card">Torne sua operação de Marketing Digital mais produtiva</span>
@@ -218,12 +199,16 @@
         </div>
     </div>
     <div id="container-2">
-      <img src="imagens/cta.png">
+      <img id="img-graphs" src="imagens/graphs.png">
+      <img id="img-graphs1" src="imagens/graphs1.png">
 
+      <h2>Por que mais de 25.000 empresas escolheram o RD Station?</h2>
+      <p>Combinamos nossos produtos de Marketing e Vendas com pessoas que se importam com seus resultados e um ecossistema que apoia o seu negócio do planejamento à prática.</p>
+      <a href="https://app.rdstation.com.br/signup" target="_blank">
+        <button id="btn-container2">CRIAR CONTA GRATUITA</button>
+      </a>
     </div>
     <div id="img-demo">
-      <!-- <img src="imagens/demo.png"> -->
-      <!-- <img src="imagens/section/shape-4.png"> -->
       <span id="span-teste">
         <h3 id="demo-h3">Entenda melhor como o RD Station Marketing funciona na prática
           assista a demonstração</h3>
@@ -231,21 +216,20 @@
           <img src="imagens/label-text.png">
           <img src="imagens/play/Vector.png">
         </button>
-          <!-- <span id="shadown-2"></span> -->
-        <img id="img-video"src="imagens/img-video.png">
+         <img id="img-video"src="imagens/img-video.png">
         <a href="https://www.youtube.com/watch?v=lGCesaaLi4s" ><img id="play-image" src="imagens/icons-rd/play.png"></a>
-
       </span>
-
     </div>
     <section id="integrations">
       <div id="container-3">
         <div id="text-label">
           <h2 id="title-h2">Torne sua operação de Marketing ainda mais poderosa</h2>
           <h4 id="subtitle-3">O RD Station Marketing se conecta as principais ferramentas nacionais e internacionais </h4>
-          <button id="btn-label"
-          >CRIAR CONTA GRATUITA
-          </button>
+          <a href="https://app.rdstation.com.br/signup" target="_blank">
+            <button id="btn-label"
+              >CRIAR CONTA GRATUITA
+            </button>
+          </a>
         </div>
 
         <div id="icons-integrations">
@@ -293,7 +277,8 @@
   </footer>
   </main>
 
-  <script src="script.js"></script>
+  <script src="script.js">
+  </script>
 
 </body>
 </html>

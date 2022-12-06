@@ -56,3 +56,49 @@ const formato = {
     }, false)
 
   })
+
+
+// validação de site
+
+  const regex = "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?";
+
+
+  var re = regex;
+  var OK = re.exec(document.getElementById("url").value);
+
+
+
+
+// valid password
+
+// const password = getElementById("#password");
+
+function validarSenha() {
+  // let form = document.getElementById("#inputs");
+  let senha = document.getElementById("#password");
+  let confPass = document.getElementById("#password-conf");
+
+  let caracther = "";
+
+  if(senha.length <=6 && senha.length <=10){
+    minMax = true;
+  }
+
+  if(password === "" || caracther === false){
+    alert("Favor preencher o campo senha, caracteres de 6 a 10");
+    senha.focus();
+    return false;
+  }
+
+  if(confPass === "" || caracther === false) {
+    alert("Favor preencher o campo senha, caracteres de 6 a 10");
+    senha.focus();
+    return false;
+  }
+  if(senha !== "" || confPass) {
+    alert("Senhas diferentes!");
+    senha.focus();
+    return false;
+  }
+
+}

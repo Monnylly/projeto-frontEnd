@@ -1,0 +1,12 @@
+body {
+  width: 1440px;
+  height: 4703px;
+}
+
+@media screen and (max-width: 1400px){
+  body {
+    max-width: 1400px;
+    height: 4703;
+    margin: 1rem auto;
+  }
+}
